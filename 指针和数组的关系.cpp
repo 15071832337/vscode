@@ -79,7 +79,6 @@ set showmatch               " 光标遇到圆括号、方括号、大括号时�
 set ruler                   " 在状态栏显示光标的当前位置（位于哪一行哪一列）
  
 set guifont=Consolas:h15    " 设置字体和字体大小
-colorscheme molokai         " 设置主题为molokai
  
 set nobackup                " 取消备份文件
                             " 默认情况下，文件保存时，会额外创建一个备份文件，它的文件名是在原文件名的末尾，再添加一个波浪号~
