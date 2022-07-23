@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-23 16:06:32
+ * @LastEditTime: 2022-07-23 16:29:19
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -15,6 +15,10 @@ void swap1(int& x,int& y);
 void show1();
 void swap2(int *p,int*q);
 void show2();
+void show3();
+void a7();
+void a8();
+
 
 using namespace std;
 const int MAX = 4;
@@ -24,7 +28,7 @@ const int MAX = 4;
  
 int main ()
 {
-   show2();
+   a8();
    return 0;
 }
 
@@ -128,6 +132,9 @@ void swap2(int *p,int *q){
    *p=*q;
    *q=temp;
 }
+//通过使用引用来替代指针，会使 C++ 程序更容易阅读和维护。C++ 函数可以返回一个引用，方式与返回一个指针类似。
+//当函数返回一个引用时，则返回一个指向返回值的隐式指针。这样，函数就可以放在赋值语句的左边。例如，请看下面这个简单的程序：
+
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
