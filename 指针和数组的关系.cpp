@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-22 19:44:32
+ * @LastEditTime: 2022-07-23 10:54:35
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -10,6 +10,7 @@
  void a1();
  void a2();
  void a3();
+ unsigned int a4(char c,char s[]);
 
 using namespace std;
 const int MAX = 4;
@@ -19,7 +20,8 @@ const int MAX = 4;
  
 int main ()
 {
-   a3();
+   char s[]={'a','s','f','\0'};
+   a4('s',s);
    return 0;
 }
 
@@ -61,6 +63,32 @@ void a3(){
     cout<<sizeof(var[0])<<endl;//给出一个元素的字节数
    cout<<sizeof(var) / sizeof(var[0])<<endl;
 }
+
+//字符数组和字符指针的使用，这里利用函数a4(),a5();编写函数，返回字符c在字符串s中的首次出现的位置
+
+unsigned int a4(char c,char s[]){
+   unsigned int i;
+   const int inexistent_indext = 0;
+   const int existent_index = 1;
+   if (!s)
+   {
+      cout<<"FindCharFirst:Illegal string.\n"<<endl;
+      exit(1);
+   }
+   for ( i = 0; s[i]!='\0'; i++)
+   {
+      if (s[i]==c)
+      {
+         return i;
+      }
+      return inexistent_indext;
+   }
+   return existent_index;
+}
+
+
+
+
 //vim配置文件操作步骤
 //1.在根目录/下进行操作  cd /etc/vim
 //2.然后进行操作 sudo vim vimrc
@@ -94,6 +122,7 @@ set noerrorbells            " 出错时不要发出响声
 syntax on
 syntax enable 
 */
+
 
 
 
