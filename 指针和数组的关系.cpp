@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-23 10:54:35
+ * @LastEditTime: 2022-07-23 12:59:03
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -10,7 +10,8 @@
  void a1();
  void a2();
  void a3();
- unsigned int a4(char c,char s[]);
+ void a6();
+
 
 using namespace std;
 const int MAX = 4;
@@ -20,8 +21,7 @@ const int MAX = 4;
  
 int main ()
 {
-   char s[]={'a','s','f','\0'};
-   a4('s',s);
+   a6();
    return 0;
 }
 
@@ -65,25 +65,30 @@ void a3(){
 }
 
 //字符数组和字符指针的使用，这里利用函数a4(),a5();编写函数，返回字符c在字符串s中的首次出现的位置
+/*
 
-unsigned int a4(char c,char s[]){
-   unsigned int i;
-   const int inexistent_indext = 0;
-   const int existent_index = 1;
-   if (!s)
+*/
+void a6(){
+   char s[]={'e','r','t','4','\0'};
+   cout<<s[0]<<endl;
+   //对字符数组s进行值的修改，全部修改成a
+   for (int i = 0; i < sizeof(s)/sizeof(s[0])-1; i++)
    {
-      cout<<"FindCharFirst:Illegal string.\n"<<endl;
-      exit(1);
+      s[i]='a';
    }
-   for ( i = 0; s[i]!='\0'; i++)
+   cout<<s<<endl;
+   //下面利用指针进行上述的修改操作
+   //1.we will firestly define a point signed char and  named t 
+   char *t;
+   for ( t = s; *t!=s[sizeof(s)/sizeof(s[0])-1]; t++)
    {
-      if (s[i]==c)
-      {
-         return i;
-      }
-      return inexistent_indext;
+      *t='b';
    }
-   return existent_index;
+   cout<<s<<endl;
+   cout<<sizeof(s)/sizeof(s[0])-1<<endl;
+   
+   
+   
 }
 
 
