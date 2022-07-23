@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-23 12:59:03
+ * @LastEditTime: 2022-07-23 13:30:12
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -11,7 +11,8 @@
  void a2();
  void a3();
  void a6();
-
+void swap(int& x,int& y);
+void show();
 
 using namespace std;
 const int MAX = 4;
@@ -21,7 +22,7 @@ const int MAX = 4;
  
 int main ()
 {
-   a6();
+   show();
    return 0;
 }
 
@@ -80,20 +81,37 @@ void a6(){
    //下面利用指针进行上述的修改操作
    //1.we will firestly define a point signed char and  named t 
    char *t;
+   //2.we will put the point of s to t and if the *t is '\0',the for end
    for ( t = s; *t!=s[sizeof(s)/sizeof(s[0])-1]; t++)
    {
-      *t='b';
+      *t='b';//3.the char 'b' given *t because the point is moved,so the *t is changed in for
    }
    cout<<s<<endl;
    cout<<sizeof(s)/sizeof(s[0])-1<<endl;
-   
-   
-   
+}
+
+//引用引用变量是一个别名，也就是说，它是某个已存在变量的另一个名字。一旦把引用初始化为某个变量，就可以使用该引用名称或变量名称来指向变量。
+//用引用来交换两个数值
+
+
+void show(){
+   int a = 10;
+   int b = 20;
+   cout<<"the numbers is no changed:"<<a<<" "<<b<<endl;
+   swap(a,b);
+   cout<<"the numbers is  changed:"<<a<<" "<<b<<endl;
+
+
+}
+void swap(int&x,int&y){
+   int temp;
+   temp=x;
+   x=y;
+   y=temp;
 }
 
 
-
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //vim配置文件操作步骤
 //1.在根目录/下进行操作  cd /etc/vim
 //2.然后进行操作 sudo vim vimrc
@@ -127,7 +145,60 @@ set noerrorbells            " 出错时不要发出响声
 syntax on
 syntax enable 
 */
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//vim编辑器的操作键位
+/*
+vim模式
+
+普通模式 NORMAL
+插入模式 INSERT
+可视模式 VISUAL
+命令模式：
+
+普通模式：
+   在普通模式下，选中要复制的代码，然后按住ctrl，然后就能拖动复制选中代码
+
+转换
+普通模式 NORMAL  enter i (在光标前插入)> 插入模式 INSERT
+普通模式 NORMAL  enter I (在行首插入)> 插入模式 INSERT
+普通模式 NORMAL  enter a (在光标后插入)> 插入模式 INSERT
+普通模式 NORMAL  enter A (在行尾插入)> 插入模式 INSERT
+普通模式 NORMAL  enter o (在下一行插入)> 插入模式 INSERT
+普通模式 NORMAL  enter O (在上一行插入)> 插入模式 INSERT
+
+插入模式 INSET  enter ESC/jj/CapLocK > 普通模式NORMAL
+
+普通模式 NORMAL enter ESC/v > 可视模式 VISUAL
+
+普通模式 NORMAL enter : > 命令模式：
+命令模式： enter ESC > 普通模式 NORMAL enter 
 
 
+光标的移动
+普通模式
+k上，h左，j下，l右
 
+w 跳到一个单词开头
+b 跳到本单词或上一单词开头
+e 跳到本单词或下一个单词结尾
+ge 跳到上一个单词结尾
+
+f{char} 光标跳到下一个{char}所在位置
+F{char} 反向移动到上一个{char}所在位置
+t{char} 光标跳到下一个{char}的前一个字符位置
+T{cahr} 光标反向移动到上个{char}的后一个字符的位置
+；重复上次的字符查找操作
+，反向查找上次的查找命令
+
+前面是操作符告诉vim要做什么
+而动作motion是告诉vim我们要怎么做
+
+操作符
+d(delete)删除
+c(change)修改（删除并进行插入模式）
+y(yank)复制
+p(paste)粘贴
+d(撤销)
+v(visual)选中并进入VISUAL模式
+*/
 
