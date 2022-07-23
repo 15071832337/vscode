@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-23 13:30:12
+ * @LastEditTime: 2022-07-23 16:06:32
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -11,8 +11,10 @@
  void a2();
  void a3();
  void a6();
-void swap(int& x,int& y);
-void show();
+void swap1(int& x,int& y);
+void show1();
+void swap2(int *p,int*q);
+void show2();
 
 using namespace std;
 const int MAX = 4;
@@ -22,7 +24,7 @@ const int MAX = 4;
  
 int main ()
 {
-   show();
+   show2();
    return 0;
 }
 
@@ -90,11 +92,11 @@ void a6(){
    cout<<sizeof(s)/sizeof(s[0])-1<<endl;
 }
 
-//引用引用变量是一个别名，也就是说，它是某个已存在变量的另一个名字。一旦把引用初始化为某个变量，就可以使用该引用名称或变量名称来指向变量。
+//引用变量是一个别名，也就是说，它是某个已存在变量的另一个名字。一旦把引用初始化为某个变量，就可以使用该引用名称或变量名称来指向变量。
 //用引用来交换两个数值
 
 
-void show(){
+void show1(){
    int a = 10;
    int b = 20;
    cout<<"the numbers is no changed:"<<a<<" "<<b<<endl;
@@ -103,11 +105,28 @@ void show(){
 
 
 }
-void swap(int&x,int&y){
+void swap1(int&x,int&y){
    int temp;
    temp=x;
    x=y;
    y=temp;
+}
+//利用指针进行两个数的交换操作，其思路是定义两个整型数，定义两个指针，然后进行指针操作
+void show2(){
+   int a=10;
+   int b=20;
+   int *p=&a;
+   int *q=&b;
+   cout<<"the numbers is no changed "<<a<<" "<<b<<endl;
+   swap2(p,q);
+   cout<<"the numbers  is changed "<<a<<" "<<b<<endl;
+   //这里可以如果用引用的话，可以不用定义整型指针 p,q,可以直接把&a,&b传入swap2
+}
+void swap2(int *p,int *q){
+   int temp;
+   temp=*p;
+   *p=*q;
+   *q=temp;
 }
 
 
