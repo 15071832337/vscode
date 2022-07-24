@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-23 16:29:19
+ * @LastEditTime: 2022-07-24 15:09:33
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -15,7 +15,8 @@ void swap1(int& x,int& y);
 void show1();
 void swap2(int *p,int*q);
 void show2();
-void show3();
+void swap3(int x,int y);
+void a9();
 void a7();
 void a8();
 
@@ -28,7 +29,7 @@ const int MAX = 4;
  
 int main ()
 {
-   a8();
+   a9();
    return 0;
 }
 
@@ -135,7 +136,22 @@ void swap2(int *p,int *q){
 //通过使用引用来替代指针，会使 C++ 程序更容易阅读和维护。C++ 函数可以返回一个引用，方式与返回一个指针类似。
 //当函数返回一个引用时，则返回一个指向返回值的隐式指针。这样，函数就可以放在赋值语句的左边。例如，请看下面这个简单的程序：
 
+//下面试验一下这种交换数据的操作,该操作并不能交换两个数的数值，它既不是指针进行地址和内容的操作，也不是引用直接进行操作，这种复制情况只能在函数中交换，函数结束时，临时变量消失。
 
+void a9(){
+   int x=10;
+   int y=20;
+   cout<<"the numbers is no changed :"<<x<<" "<<y<<endl;
+   swap3(x,y);
+   cout<<"the numbers is  changed? :"<<x<<" "<<y<<endl;
+}
+void swap3(int x,int y){
+   int temp;
+   temp=x;
+   x=y;
+   y=temp;
+}
+//above example,the answer shown is no changed 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //vim配置文件操作步骤
