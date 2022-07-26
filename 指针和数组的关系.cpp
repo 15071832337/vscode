@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-24 15:09:33
+ * @LastEditTime: 2022-07-26 16:17:27
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -19,6 +19,9 @@ void swap3(int x,int y);
 void a9();
 void a7();
 void a8();
+int jiecheng_jisuan(int x);
+int jiecheng_jisuan1();
+
 
 
 using namespace std;
@@ -29,7 +32,8 @@ const int MAX = 4;
  
 int main ()
 {
-   a9();
+   jiecheng_jisuan(4);
+   jiecheng_jisuan1();
    return 0;
 }
 
@@ -152,6 +156,50 @@ void swap3(int x,int y){
    y=temp;
 }
 //above example,the answer shown is no changed 
+
+//6.4 编写一个与用户交互的函数，要求用户输入一个数字，计算生成该数字的阶乘。
+//第一步传入参数为输入参数，定义阶乘函数，返回一个整数结果
+int jiecheng_jisuan(int x){
+   
+   int i;
+   int answer=1;
+   if (x>=1)
+   {
+         for ( i = 1; i < x+1; i++)
+      {
+         answer=i*answer;
+      }
+      //return answer;
+   cout<<"the answer :"<<answer<<endl;
+   }
+   else{
+      cout<<"the input number x is not included the field of x>=1, you should repeatedly input:"<<endl;
+   }
+   return 0;
+}
+
+int jiecheng_jisuan1(){
+   cout<<"Please input a int number x(x>=1):"<<endl;
+   int x;
+   cin>>x;
+   int i;
+   int answer=1;
+   if (x>=1)
+   {
+         for ( i = 1; i < x+1; i++)
+      {
+         answer=i*answer;
+      }
+      //return answer;
+   cout<<"the answer :"<<answer<<endl;
+   }
+   else{
+      cout<<"the input number x is not included the field of x>=1, you should repeatedly input:"<<endl;
+   }
+   return 0;
+}
+
+
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //vim配置文件操作步骤
