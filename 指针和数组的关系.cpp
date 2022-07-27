@@ -2,25 +2,16 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-26 16:17:27
+ * @LastEditTime: 2022-07-27 10:05:04
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 #include <iostream>
- void a1();
- void a2();
- void a3();
- void a6();
-void swap1(int& x,int& y);
-void show1();
-void swap2(int *p,int*q);
-void show2();
-void swap3(int x,int y);
-void a9();
-void a7();
-void a8();
-int jiecheng_jisuan(int x);
-int jiecheng_jisuan1();
+#include "1.h"
+
+
+
+
 
 
 
@@ -34,6 +25,7 @@ int main ()
 {
    jiecheng_jisuan(4);
    jiecheng_jisuan1();
+   a2();
    return 0;
 }
 
@@ -78,7 +70,6 @@ void a3(){
 
 //字符数组和字符指针的使用，这里利用函数a4(),a5();编写函数，返回字符c在字符串s中的首次出现的位置
 /*
-
 */
 void a6(){
    char s[]={'e','r','t','4','\0'};
@@ -239,15 +230,12 @@ syntax enable
 //vim编辑器的操作键位
 /*
 vim模式
-
 普通模式 NORMAL
 插入模式 INSERT
 可视模式 VISUAL
 命令模式：
-
 普通模式：
    在普通模式下，选中要复制的代码，然后按住ctrl，然后就能拖动复制选中代码
-
 转换
 普通模式 NORMAL  enter i (在光标前插入)> 插入模式 INSERT
 普通模式 NORMAL  enter I (在行首插入)> 插入模式 INSERT
@@ -255,34 +243,25 @@ vim模式
 普通模式 NORMAL  enter A (在行尾插入)> 插入模式 INSERT
 普通模式 NORMAL  enter o (在下一行插入)> 插入模式 INSERT
 普通模式 NORMAL  enter O (在上一行插入)> 插入模式 INSERT
-
 插入模式 INSET  enter ESC/jj/CapLocK > 普通模式NORMAL
-
 普通模式 NORMAL enter ESC/v > 可视模式 VISUAL
-
 普通模式 NORMAL enter : > 命令模式：
 命令模式： enter ESC > 普通模式 NORMAL enter 
-
-
 光标的移动
 普通模式
 k上，h左，j下，l右
-
 w 跳到一个单词开头
 b 跳到本单词或上一单词开头
 e 跳到本单词或下一个单词结尾
 ge 跳到上一个单词结尾
-
 f{char} 光标跳到下一个{char}所在位置
 F{char} 反向移动到上一个{char}所在位置
 t{char} 光标跳到下一个{char}的前一个字符位置
 T{cahr} 光标反向移动到上个{char}的后一个字符的位置
 ；重复上次的字符查找操作
 ，反向查找上次的查找命令
-
 前面是操作符告诉vim要做什么
 而动作motion是告诉vim我们要怎么做
-
 操作符
 d(delete)删除
 c(change)修改（删除并进行插入模式）
