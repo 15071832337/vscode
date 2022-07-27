@@ -2,17 +2,12 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-27 10:05:04
+ * @LastEditTime: 2022-07-27 10:51:36
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 #include <iostream>
 #include "1.h"
-
-
-
-
-
 
 
 using namespace std;
@@ -23,9 +18,8 @@ const int MAX = 4;
  
 int main ()
 {
-   jiecheng_jisuan(4);
-   jiecheng_jisuan1();
-   a2();
+   char s[]={'a','r','d','\0'};
+   print(s);
    return 0;
 }
 
@@ -96,7 +90,7 @@ void a6(){
 //用引用来交换两个数值
 
 
-void show1(){
+void swapshow1(){
    int a = 10;
    int b = 20;
    cout<<"the numbers is no changed:"<<a<<" "<<b<<endl;
@@ -105,11 +99,18 @@ void show1(){
 
 
 }
-void swap1(int&x,int&y){
+void swap1(int &i,int &j){
    int temp;
-   temp=x;
-   x=y;
-   y=temp;
+   temp=i;
+   i=j;
+   j=temp;
+   cout<<"the numbers is changed :"<<i<<" "<<j<<endl;
+}
+
+void swapshow2(){
+   int  x=2;
+   int y=4;
+   swap1(x,y);
 }
 //利用指针进行两个数的交换操作，其思路是定义两个整型数，定义两个指针，然后进行指针操作
 void show2(){
@@ -188,6 +189,19 @@ int jiecheng_jisuan1(){
       cout<<"the input number x is not included the field of x>=1, you should repeatedly input:"<<endl;
    }
    return 0;
+}
+
+//字符的输出函数
+void print(const char *cp){
+   if (cp)
+   {
+      while (*cp)
+      {
+         cout<<*cp++;
+      }
+      
+   }
+   
 }
 
 
