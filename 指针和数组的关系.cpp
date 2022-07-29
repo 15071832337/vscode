@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-27 10:51:36
+ * @LastEditTime: 2022-07-29 09:05:48
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -18,8 +18,8 @@ const int MAX = 4;
  
 int main ()
 {
-   char s[]={'a','r','d','\0'};
-   print(s);
+   TheValuEqualXiaBiao();
+   TheValuEqualXiaBiao(10);
    return 0;
 }
 
@@ -197,12 +197,104 @@ void print(const char *cp){
    {
       while (*cp)
       {
-         cout<<*cp++;
+         cout<<*(cp++);
       }
       
    }
    
 }
+void printshow(){
+   char s[]={'a','r','d','\0'};
+   print(s);
+}
+
+//编写一个练习，接收两个参数，一个是int的数，一个是int型指针，函数比较int的值和指针所指的值，返回较大的那个。
+void CompareIntNumberAndIntPointNumber1(int &x,int *y){
+   if (x>*y)
+   {
+      cout<<"the bigger number is:"<<x<<endl;
+   }
+   else if (x<*y)
+   {
+      cout<<"the bigger number is:"<<*y<<endl;
+   }
+   else{
+      cout<<"the two numbers is same"<<endl;
+   }
+}
+//这里为了方便，我将输入的两个整数，一个直接利用引用，另一个把输入内容的地址交给指针
+void CompareIntNumberAndIntPointNumber2(){
+   int x;
+   int y;
+   int *p=&y;
+   cout<<"Please input two numbers:"<<endl;
+   cin>>x;
+   cin>>y;
+   CompareIntNumberAndIntPointNumber1(x,p);
+}
+//编写一个函数，令其交换两个int指针
+void ToChangePoint(int *x,int *y){
+   int m=1;
+   int n=2;
+   x=&m;
+   y=&n;
+   cout<<"the address of point is :"<<x<<" "<<y<<endl;
+   int *temp;
+   temp=x;
+   x=y;
+   y=temp;   
+   cout<<"the address changed of point is:"<<x<<" "<<y<<endl;
+}
+//函数递归调用实现阶乘
+int DeGuiDiaoYong(int val){
+   if (val>1)
+   {
+      int sum=1;
+      sum=DeGuiDiaoYong(val-1)*val;
+      return sum;
+   }
+   else
+   {
+      return 1;
+   }
+}
+void DeGuiDiaoYongShow(){
+   cout<<"Please input a numbers:"<<endl;
+   int x;
+   cin>>x;
+   if (x>1)
+   {
+      cout<<DeGuiDiaoYong(x)<<endl;
+   }
+   else{
+      cout<<"the number is valid"<<endl;
+   }
+}
+void TheValuEqualXiaBiao(){
+   int arr[10];
+   for (int i = 0; i < 10; i++)
+   {
+      arr[i]=i;
+   }
+   for (int i = 0; i < 10; i++)
+   {
+      cout<<arr[i]<<" ";
+   }
+   cout<<endl;//换行
+}
+int TheValuEqualXiaBiao(int Arsize){
+   int arr[Arsize];
+   for (int i = 0; i < Arsize; i++)
+   {
+      arr[i]=i;
+   }
+   for (int i = 0; i < Arsize; i++)
+   {
+      cout<<arr[i]<<" ";
+   }
+   return 0;
+}
+
 
 
 
