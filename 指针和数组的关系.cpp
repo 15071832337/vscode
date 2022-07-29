@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-29 09:27:17
+ * @LastEditTime: 2022-07-29 21:55:32
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -18,8 +18,7 @@ const int MAX = 4;
  
 int main ()
 {
-   TheValuEqualXiaBiao();
-   TheValuEqualXiaBiao(10);
+   MaxSumOfArr();
    return 0;
 }
 
@@ -296,6 +295,52 @@ int TheValuEqualXiaBiao(int Arsize){
    return 0;
 }
 
+//利用begin和and函数做数组的遍历
+void BeginAndToShowArr(){
+   int arr[]={0,1,2,3,4,5};
+   int *beg=begin(arr);
+   int *last=end(arr);
+   while (beg!=last)
+   {
+      cout<<*beg<<" ";
+      beg++;
+   } 
+}
+//求解数组的最大连续和
+void MaxSumOfArr(){
+   int total=0;
+  int A[]={1,2,3,-1,5,6,7,8,9,1,-2};
+  int best=A[1];
+  int n=11;
+  int sum1=0;
+  for (int i = 0; i < n; i++)
+  {
+   for (int j = i; j < n; j++)
+   {
+     int sum=0;
+     for (int k = i; k <=j ; k++)
+     {
+      sum=sum+A[k];
+      total++;
+     }
+       if (sum>best)
+      {
+         best=sum;
+      }
+     
+   }
+   
+  }
+  cout<<best<<" "<<total<<endl;
+
+  for (int i = 0; i < n; i++)
+  {
+   sum1=sum1+A[i];
+  }
+  cout<<sum1<<endl;
+  
+   
+}
 
 
 
