@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-31 10:18:23
+ * @LastEditTime: 2022-07-31 10:35:29
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -18,7 +18,7 @@ const int MAX = 4;
  
 int main ()
 {
-   MoveArr(10);
+   SharingCandy(100);
    return 0;
 }
 
@@ -414,6 +414,31 @@ void MoveArr(int size){
    }
 }
 //分糖
+void SharingCandy(int size){
+   int arr[size]={};
+   for (int i = 0; i < size; i++)
+   {
+      arr[i]=2*i+3;
+   }
+   for (int i = 0; i < size; i++)
+   {
+      cout<<i+1<<":"<<arr[i]<<" ";
+   }
+   for (int i = 0; i < size-1; i++)
+   {
+      arr[i+1]=arr[i]/2+arr[i+1];
+      arr[i]=arr[i]/2;
+   }
+   cout<<"-----------"<<endl;
+   for (int i = 0; i < size; i++)
+   {
+      cout<<i+1<<":"<<arr[i]<<" ";
+   }
+   
+   
+   
+   
+}
 
 
 
