@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-29 21:55:32
+ * @LastEditTime: 2022-07-31 10:18:23
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -18,7 +18,7 @@ const int MAX = 4;
  
 int main ()
 {
-   MaxSumOfArr();
+   MoveArr(10);
    return 0;
 }
 
@@ -337,10 +337,84 @@ void MaxSumOfArr(){
   {
    sum1=sum1+A[i];
   }
-  cout<<sum1<<endl;
-  
-   
+  cout<<sum1<<endl; 
 }
+
+//const的使用
+void ConstUse(int& ref){
+    ref=30;
+}
+void ConstShow(){
+   int a=10;
+   cout<<a<<endl;
+   int &ref=a;
+   ref=20;
+   cout<<a<<endl;
+   ConstUse(a);
+   cout<<a<<endl;
+}
+//从任意输入的三个整数。找出按大小顺序排序处于中间位置的数。
+void MidShow(int x,int y,int z){
+   if ((y-x)*(y-z)<=0)
+   {
+      cout<<"the mid numbers is :"<<y<<endl;
+   }
+   else if ((x-y)*(x-z)<=0)
+   {
+      cout<<"the mid numbers is :"<<x<<endl;
+   }
+   else
+   {
+      cout<<"the mid numbers is :"<<z<<endl;
+   }
+     
+}
+//4.1.2逆序输出数组元素
+
+void NiXuOutPutArr(int size){
+   double arr[size]={};
+   arr[0]=2;
+   for (int i = 0; i < size; i++)
+   {
+      arr[i+1]=2*arr[i];
+   }
+   for (int i = 0; i < size; i++)
+   {
+      cout<<arr[size-1-i]<<" ";
+      
+   }
+    for (int i = 0; i < size; i++)
+   {
+      cout<<arr[i]<<" ";
+      
+   }
+}
+//整数数组，n个元素，用键盘输入，将数组第一个元素移到数组末位，其余元素
+//依次前移一个位置输出
+void MoveArr(int size){
+   int arr[size];
+   for (int i = 0; i < size; i++)
+   {
+      arr[i]=i;
+   }
+   for (int i = 0; i < size; i++)
+   {
+      cout<<arr[i]<<" ";
+   }
+   for (int i = 0; i < size-1; i++)
+   {
+      int temp;
+      temp=arr[i];
+      arr[i]=arr[i+1];
+      arr[i+1]=temp;
+   }
+   for (int i = 0; i < size; i++)
+   {
+      cout<<arr[i]<<" ";
+   }
+}
+//分糖
+
 
 
 
