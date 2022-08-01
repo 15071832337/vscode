@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-31 16:28:15
+ * @LastEditTime: 2022-08-01 10:48:02
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -20,8 +20,9 @@ const int MAX = 4;
 int main ()
 {
 
+   abc a;
+   a.TwoArrShow(2,2);
    
-   TwoArrShow(3,3);
    return 0;
 }
 
@@ -439,7 +440,7 @@ void SharingCandy(int size){
    }
 }
 //灯光控制，二的倍数的灯变状态，三的倍数的灯改变状态
-void LightChange(){
+void abc::LightChange(){
    int arrsize=1000;
    int arr[arrsize]={};
    //初始时所有灯熄灭
@@ -474,7 +475,7 @@ void LightChange(){
    
 }
 //二维数组赋值输出
-void TwoArrShow(int h,int l){
+void abc::TwoArrShow(int h,int l){
    
    int arr[h][l]={0};
 
@@ -490,7 +491,7 @@ void TwoArrShow(int h,int l){
    {
       for (int j = 0; j < l; j++)
       {
-         cout<<arr[i][j]<<" ";
+         cout<<arr[i][j]<<"  ";
          
       }  
       cout<<"\n";
@@ -500,19 +501,21 @@ void TwoArrShow(int h,int l){
    {
       for (int j = 0; j < l; j++)
       {
-        arr[i][j]=1; 
+        arr[i][j]=F(i,j); 
       }
    }
    for (int i = 0; i < h; i++)
    {
       for (int j = 0; j < l; j++)
       {
-         cout<<arr[i][j]<<" ";
+         cout<<arr[i][j]<<"  ";
       }
       cout<<"\n";  
    }
 }
-//矩阵加法计算
+int abc::F(int x,int y){
+   return x^2+y^2;
+}
 
    
 

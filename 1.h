@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-27 10:01:58
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-07-31 16:24:11
+ * @LastEditTime: 2022-08-01 10:46:56
  * @FilePath: \code(C++)\vscode\1.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -40,7 +40,20 @@ void MoveArr(int);
 void SharingCandy(int);
 void LightChange();
 void TwoArrShow(int, int);
+int F(int,int);
 
+class abc
+{
+private:
+    void LightChange();
+protected:
+    
+public:
+    int F(int,int);
+    void TwoArrShow(int, int);
+    void SharingCandy(int);
+    int TheValuEqualXiaBiao(int );
+};
 
 
 
