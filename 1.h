@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-27 10:01:58
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-08-01 10:46:56
+ * @LastEditTime: 2022-08-01 11:07:35
  * @FilePath: \code(C++)\vscode\1.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -42,6 +42,7 @@ void LightChange();
 void TwoArrShow(int, int);
 int F(int,int);
 
+//定义了一个类
 class abc
 {
 private:
@@ -54,6 +55,16 @@ public:
     void SharingCandy(int);
     int TheValuEqualXiaBiao(int );
 };
+//继承上类
+class bcd:public abc
+{
+private:
+    
+public:
+    void MidShow(int,int,int);
+   
+};
+
 
 
 

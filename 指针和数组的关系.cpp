@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-08-01 10:48:02
+ * @LastEditTime: 2022-08-01 11:06:25
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -21,6 +21,8 @@ int main ()
 {
 
    abc a;
+   bcd b;
+   b.MidShow(2,20,39);
    a.TwoArrShow(2,2);
    
    return 0;
@@ -358,7 +360,7 @@ void ConstShow(){
    cout<<a<<endl;
 }
 //从任意输入的三个整数。找出按大小顺序排序处于中间位置的数。
-void MidShow(int x,int y,int z){
+void bcd::MidShow(int x,int y,int z){
    if ((y-x)*(y-z)<=0)
    {
       cout<<"the mid numbers is :"<<y<<endl;
@@ -418,7 +420,7 @@ void MoveArr(int size){
    }
 }
 //分糖
-void SharingCandy(int size){
+void abc::SharingCandy(int size){
    int arr[size]={};
    for (int i = 0; i < size; i++)
    {
@@ -512,6 +514,7 @@ void abc::TwoArrShow(int h,int l){
       }
       cout<<"\n";  
    }
+   this->SharingCandy(10);
 }
 int abc::F(int x,int y){
    return x^2+y^2;
