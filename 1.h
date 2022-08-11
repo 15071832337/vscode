@@ -2,7 +2,7 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-27 10:01:58
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-08-04 09:44:32
+ * @LastEditTime: 2022-08-09 09:39:59
  * @FilePath: \code(C++)\vscode\1.h
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -44,19 +44,29 @@ void TwoArrShow(int, int);
 int F(int,int);
 void test01();
 void test02();
-
+void test03();
+void test04();
+void test05();
+template<typename T>
+void S(T &a,T &b);
 //定义了一个类
-class abc
+//关键字class
+class abc//类名
 {
-private:
-    void LightChange();
-protected:
+public://访问修饰符
+    int x;//成员变量
+    int y;
+    void LightChange();//成员方法
+protected://受保护成员
+void MoveArr(int);
+private://私有成员
+    void MaxSumOfArr();
+public://公有成员
     
-public:
-    int F(int,int);
     void TwoArrShow(int, int);
     void SharingCandy(int);
     int TheValuEqualXiaBiao(int );
+
 };
 //继承上类
 class bcd:public abc
@@ -68,12 +78,13 @@ public:
    
 };
 
+
 class Person1
 {
-
 public:
     Person1(int age){
-        this->age=age;//this 指向被调用的成员函数所指向的对象 即对象p1
+        this->age=age;
+    //this 指向被调用的成员函数所指向的对象 即对象p1
     }//形参的age和属性的age进行了区分
     int age;
     Person1& PersonAddAge(Person1 &p){
@@ -126,8 +137,16 @@ void doSpeak(Animal &animal){
 //为了处理子类和父类的同名函数谁执行的问题，采用
 //virtual地址晚绑定
 
-
-
+class Dog:public Animal
+{
+private:
+    /* data */
+public:
+void speak(){
+    cout<<"Dog speak"<<endl;
+}
+    
+};
 
 
 

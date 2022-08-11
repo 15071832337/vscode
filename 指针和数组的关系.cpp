@@ -2,13 +2,14 @@
  * @Author: ‘15071832337’ ‘1418868984@qq.com’
  * @Date: 2022-07-22 11:39:19
  * @LastEditors: ‘15071832337’ ‘1418868984@qq.com’
- * @LastEditTime: 2022-08-01 11:06:25
+ * @LastEditTime: 2022-08-09 15:24:18
  * @FilePath: \vscode\1.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 #include <iostream>
 #include "1.h"
 #include <cmath>
+#include<vector>
 
 
 using namespace std;
@@ -20,11 +21,11 @@ const int MAX = 4;
 int main ()
 {
 
-   abc a;
-   bcd b;
-   b.MidShow(2,20,39);
-   a.TwoArrShow(2,2);
-   
+   int a=1,b=2;
+   S(a,b);//自动类型推导
+   S<int>(a,b);//显示指定类型
+   test02();
+   test04();
    return 0;
 }
 
@@ -516,11 +517,115 @@ void abc::TwoArrShow(int h,int l){
    }
    this->SharingCandy(10);
 }
-int abc::F(int x,int y){
+int F(int x,int y){
    return x^2+y^2;
 }
 
+
+//this 指针的用途
+
+
+
+//2.通过全局函数重载+号
+Person2 operator+(Person2 &p1,Person2 &p2){
+   Person2 temp;
+        temp.m_A=p1.m_A+p2.m_A;
+        temp.m_B=p1.m_B+p2.m_B;
+        return temp;
+}
+
+//this 指针的用途
+
+void test01(){
    
+
+   Person2 p1;
+   p1.m_A=10;
+   p1.m_B=10;
+   Person2 p2;
+   p2.m_A=10;
+   p2.m_B=10;   
+   //全局函数重载本质调用
+   Person2 p3=p1+p2;
+   cout<<p3.m_A<<endl;
+   cout<<p3.m_B<<endl;
+}
+//运算符重载
+//加号运算符重载
+//1.通过成员函数重载+号
+//在类中实现
+//本质Person p3=p1.operator+(p2)
+   
+//多态
+void test02(){
+   Cat cat;
+   Dog dog;
+   doSpeak(cat);
+   doSpeak(dog);
+}
+//多态满足条件
+//1.有继承关系
+//2.子类要重写父类的虚函数，这里是speak函数
+//函数重写是函数三要素都相同，重载，函数名相同，参数不同
+//使用的时候，父类的指针或者引用指向执行子类对象
+
+
+//vector容器
+//导入该容器
+//vector容器构造
+void printVector(vector<int>&v){
+   for (vector<int>::iterator it=v.begin(); it!=v.end(); it++)
+   {
+      cout<<*it<<" ";
+   }
+   cout<<endl;
+   
+}
+
+
+void test03(){
+   vector<int>v1;
+   for (int i = 0; i < 10; i++)
+   {
+      v1.push_back(i);
+   }
+   printVector(v1);
+   //赋值
+   vector<int>v2;
+   v2=v1;
+   printVector(v2);
+   //assign
+   vector<int>v3;
+   v3.assign(v1.begin(),v1.end());
+   printVector(v3);
+   //尾插 push_back
+   //尾删 pop_back
+   //插入 insert
+   //删除 erase
+   //清空 clear
+}
+void test04(){
+   Person1 p1(22);
+   Person1 p2(20);
+   p1.PersonAddAge(p2);
+   cout<<p1.age<<endl;
+}
+//函数重载的例子
+void test05(){
+   F(3,4);
+   F(3.0,4.0);
+}
+//函数模板
+template<typename T>
+void S(T &a,T &b){
+   cout<<a<<" "<<b<<endl;
+   T temp=a;
+   a=b;
+   b=temp;
+    cout<<a<<" "<<b<<endl;
+}
+
+
 
 
 
