@@ -1,0 +1,93 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+main01 file
+
+#include "Pythia8/Pythia.h"
+using namespace Pythia8;
+using namespace std;
+int main() {
+  ofstream output_data("pT.txt");
+  ofstream output("pTHat1.txt");
+  ofstream output_sigma("pythia_sigma.txt");
+  Pythia pythia;
+  pythia.readString("Beams:idA = 2212");
+  pythia.readString("Beams:idB = 2212");
+  pythia.readString("Beams:eCM = 200.");
+  pythia.readString("HardQCD:all = on");
+  pythia.readString("PhaseSpace:pTHatMin = 0.");
+  pythia.readString("PhaseSpace:pTHatMax = 10.");
+  //pythia.readString("111:mayDecay = no");
+  pythia.init();
+  
+  Hist pTZ("dN/dpTZ",100,0.,16);
+  Hist pTh("process pT scale",200,-10,10);
+  Hist pThard("process pThat scale",500,0,50.);
+ 
+  for (int iEvent = 0; iEvent < 10000; ++iEvent) {
+    if (!pythia.next()) continue;
+    //int nCharged = 0;
+    
+    for (int i = 0; i < pythia.event.size(); ++i)
+      if (pythia.event[i].isFinal() && pythia.event[i].isCharged() ){
+        if(pythia.event[i].eta() > -0.5 && pythia.event[i].eta() <0.5){
+        	pThard.fill(pythia.info.pTHat());
+    		output<<pythia.info.pTHat()<<endl;
+        	output_data<<pythia.event[i].pT()<<endl;
+        }
+      }
+  }
+
+  
+  pythia.stat(); 
+  double sigma=pythia.info.sigmaGen();
+  output_sigma<<sigma<<endl;
+  cout<<sigma<<endl;
+  return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+Draw.C file
+
+
+//#include "Pythia8/Pythia.h"
+//using namespace Pythia8;
+void draw2(){
+  ifstream infile1("pT.txt");
+  ifstream infile2("pTHat1.txt");
+  ifstream readsigma("pythia_sigma.txt");
+  TH1D *hpT = new TH1D("hpT","",100,0,10);
+  TH1D *hpTHat = new TH1D("hpTHat","",100,0,30);
+  
+  double pT;
+  while(infile1>>pT){
+  	hpT->Fill(pT);
+  }
+  double pTHat;
+  while(infile2>>pTHat){
+  	hpTHat->Fill(pTHat);
+  }
+  double sigma;
+  while(readsigma>>sigma){
+  	
+  }
+  cout<<sigma;
+  double sigma = pythia.info.sigmaGen();
+  TCanvas *c1 = new TCanvas();
+  hpT->Scale(sigma*10/10000);
+  hpT->Draw();
+  TCanvas *c2 = new TCanvas();
+  hpTHat->Scale(sigma*(100/30)*(1/10000));
+  hpTHat->Draw();
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
