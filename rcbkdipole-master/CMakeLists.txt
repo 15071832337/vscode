@@ -1,6 +1,7 @@
 # stop if cmake version is below 3.0
 cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
-
+#set(nlohmann_json_DIR "/opt/homebrew/opt/nlohmann-json/lib/cmake/nlohmann_json")
+#find_package(nlohmann_json_DIR 3.11.3 REQUIRED)
 # project name and enable C++ support
 project(rcbkdipole CXX C)
 
@@ -31,7 +32,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # 显式指定ROOT路径
-set(ROOT_DIR "/Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1")
+#set(ROOT_DIR "/Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1")
+
+set(ROOT_DIR $ENV{ROOTSYS})
+
 
 # 查找依赖包
 find_package(ROOT REQUIRED PATHS ${ROOT_DIR} NO_DEFAULT_PATH)
@@ -89,14 +93,9 @@ target_link_libraries(CGCTest
     AmplitudeLib
     Interpolator
     DataFile
-	tools
+	Tools
 	FRAG
-	KKP
-	libAmplitudeLib.a
-    libInterpolator.a
-    libDataFile.a
-    libTools.a
-    libKKP.a           # C++ 部分的 KKP
+	KKP        
     KKP_Fortran   
     ${ROOT_LIBRARIES}
     ${GSL_LIBRARIES}

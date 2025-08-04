@@ -4,7 +4,7 @@
  */
 
 #include "qcd.hpp"
-#include "/Users/suyoupeng/Downloads/rcbkdipole-master/src/config.hpp"
+#include "config.hpp"
 
 using namespace Amplitude;
 

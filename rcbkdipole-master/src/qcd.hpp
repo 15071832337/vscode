@@ -1,7 +1,7 @@
 #ifndef _QCD_HPP
 #define _QCD_HPP
 
-#include "/Users/suyoupeng/Downloads/rcbkdipole-master/src/config.hpp"
+#include "config.hpp"
 
 /*
  * AmplitudeLib

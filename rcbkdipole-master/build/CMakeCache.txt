@@ -364,6 +364,9 @@ ROOT_rootrm_CMD:FILEPATH=/Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/Users/suyoupeng/alice/sw/osx_arm64/nlohmann_json/v3.11.3-local1/share/cmake/nlohmann_json
 
+//The directory containing a CMake configuration file for nlohmann_json_DIR.
+nlohmann_json_DIR_DIR:PATH=nlohmann_json_DIR_DIR-NOTFOUND
+
 //Path to a library.
 pkgcfg_lib_GSL_gsl:FILEPATH=/opt/homebrew/Cellar/gsl/2.8/lib/libgsl.dylib
 
