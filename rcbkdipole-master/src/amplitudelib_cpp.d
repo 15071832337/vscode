@@ -1,0 +1,72 @@
+
+# DO NOT DELETE
+
+./amplitudelib_cpp.so: amplitudelib.hpp interpolation.hpp
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_bspline.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_math.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_sys.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_inline.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_machine.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_precision.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_types.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_nan.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_pow_int.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_minmax.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_complex_long_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_errno.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_complex.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_check_range.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_long_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_long_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_complex.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_complex_long_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_complex_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_complex_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_complex_float.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_float.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_float.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_complex_float.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_ulong.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_ulong.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_long.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_long.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_uint.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_uint.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_int.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_int.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_ushort.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_ushort.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_short.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_short.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_uchar.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_uchar.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_vector_char.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_block_char.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_complex_long_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_blas_types.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_cblas.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_complex_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_complex_float.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_long_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_double.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_float.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_ulong.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_long.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_uint.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_int.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_ushort.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_short.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_uchar.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_matrix_char.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_multifit.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_spline.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_interp.h
+./amplitudelib_cpp.so: datafile.hpp tools.hpp
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_roots.h
+./amplitudelib_cpp.so: /opt/homebrew/opt/gsl/include/gsl/gsl_min.h
+./amplitudelib_cpp.so: /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/RVersion.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/ROOT/RConfig.hxx /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TClass.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TDictAttributeMap.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TInterpreter.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TROOT.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TBuffer.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TMemberInspector.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TError.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/RtypesImp.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TIsAProxy.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TFileMergeInfo.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TCollectionProxyInfo.h /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/bin/rootcling
+amplitudelib_cpp__ROOTBUILDVERSION= 6.32.06

@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc ../lib/libamplitude.a CMakeFiles/amplitude.dir/amplitudelib.cpp.o CMakeFiles/amplitude.dir/datafile.cpp.o CMakeFiles/amplitude.dir/tools.cpp.o CMakeFiles/amplitude.dir/interpolation.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib ../lib/libamplitude.a
