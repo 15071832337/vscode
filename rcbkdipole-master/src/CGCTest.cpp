@@ -44,6 +44,8 @@ using namespace std;
 #include "fragmentation.hpp"
 #include "kkp.hpp"
 
+#include "GBW.hpp"
+
 
 
 using namespace std;
@@ -1097,13 +1099,20 @@ void calculate_HadronMultiplicity_dyd2pt_ktfact(){
 }
 
 
+
+
+
+
 //================================main================================================//
 #include "TApplication.h"
 
 int main(int argc, char** argv) {
     TApplication app("app", &argc, argv); 
     //calculate_HadronMultiplicity_dyd2pt_ktfact();     
-    drawdNdydpTPi0();                
+    drawdNdydpTPi0();              
+    GBW fun;
+    fun.F_GBW(1,2);
+    
     app.Run();                          
     return 0;
 }

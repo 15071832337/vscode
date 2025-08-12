@@ -101,6 +101,7 @@ CGCTest: CMakeFiles/CGCTest.dir/build.make
 CGCTest: libAmplitudeLib.a
 CGCTest: libInterpolator.a
 CGCTest: libDataFile.a
+CGCTest: libTools.a
 CGCTest: libFRAG.a
 CGCTest: libKKP.a
 CGCTest: libKKP_Fortran.a
@@ -125,7 +126,7 @@ CGCTest: /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/lib/lib
 CGCTest: /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/lib/libROOTVecOps.so
 CGCTest: /opt/homebrew/Cellar/gsl/2.8/lib/libgsl.dylib
 CGCTest: /opt/homebrew/Cellar/gsl/2.8/lib/libgslcblas.dylib
-CGCTest: libTools.a
+CGCTest: libGBW.a
 CGCTest: CMakeFiles/CGCTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/suyoupeng/Downloads/rcbkdipole-master/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CGCTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CGCTest.dir/link.txt --verbose=$(VERBOSE)

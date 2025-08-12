@@ -32,9 +32,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # 显式指定ROOT路径
-#set(ROOT_DIR "/Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1")
+set(ROOT_DIR "/Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1")
 
-set(ROOT_DIR $ENV{ROOTSYS})
+#set(ROOT_DIR $ENV{ROOTSYS})
 
 
 # 查找依赖包
@@ -53,11 +53,13 @@ add_library(DataFile STATIC src/datafile.cpp)
 add_library(Tools STATIC src/tools.cpp)
 add_library(KKP STATIC src/kkp.cpp)
 add_library(FRAG STATIC src/fragmentation.cpp)
+add_library(GBW STATIC src/GBW.cpp)
 
 # 设置基础库的包含路径
 target_include_directories(Interpolator PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 target_include_directories(DataFile PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 target_include_directories(Tools PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
+#target_include_directories(GBW PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 # 构建AmplitudeLib库
 add_library(AmplitudeLib STATIC src/amplitudelib.cpp)
@@ -99,6 +101,7 @@ target_link_libraries(CGCTest
     KKP_Fortran   
     ${ROOT_LIBRARIES}
     ${GSL_LIBRARIES}
+    GBW
 )
 
 

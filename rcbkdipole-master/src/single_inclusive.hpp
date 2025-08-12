@@ -140,6 +140,13 @@ class SingleInclusive
          */
         std::vector<Amplitude::Parton> &Partons();
 
+
+        /**
+         * A modified BKFL equation for the UGD :The gluon distribution function F(x,k^{2}) at the leading logarithmic (LL(1/x)) approximation 
+         * We study the properties of BKFL equation using the GBW saturatio models as the input at x0
+         */
+
+    
         /*
          * TODO:
         

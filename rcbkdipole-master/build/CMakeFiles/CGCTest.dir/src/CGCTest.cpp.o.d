@@ -1170,5 +1170,6 @@ CMakeFiles/CGCTest.dir/src/CGCTest.cpp.o: \
   /Users/suyoupeng/Downloads/rcbkdipole-master/src/fragmentation.hpp \
   /Users/suyoupeng/Downloads/rcbkdipole-master/src/pdf.hpp \
   /Users/suyoupeng/Downloads/rcbkdipole-master/src/kkp.hpp \
+  /Users/suyoupeng/Downloads/rcbkdipole-master/src/GBW.hpp \
   /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TApplication.h \
   /Users/suyoupeng/alice/sw/osx_arm64/ROOT/v6-32-06-alice7-local1/include/TApplicationImp.h

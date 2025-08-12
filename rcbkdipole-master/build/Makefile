@@ -198,6 +198,19 @@ FRAG/fast:
 .PHONY : FRAG/fast
 
 #=============================================================================
+# Target rules for targets named GBW
+
+# Build rule for target.
+GBW: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GBW
+.PHONY : GBW
+
+# fast build rule for target.
+GBW/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GBW.dir/build.make CMakeFiles/GBW.dir/build
+.PHONY : GBW/fast
+
+#=============================================================================
 # Target rules for targets named AmplitudeLib
 
 # Build rule for target.
@@ -272,6 +285,30 @@ src/CGCTest.s: src/CGCTest.cpp.s
 src/CGCTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGCTest.dir/build.make CMakeFiles/CGCTest.dir/src/CGCTest.cpp.s
 .PHONY : src/CGCTest.cpp.s
+
+src/GBW.o: src/GBW.cpp.o
+.PHONY : src/GBW.o
+
+# target to build an object file
+src/GBW.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GBW.dir/build.make CMakeFiles/GBW.dir/src/GBW.cpp.o
+.PHONY : src/GBW.cpp.o
+
+src/GBW.i: src/GBW.cpp.i
+.PHONY : src/GBW.i
+
+# target to preprocess a source file
+src/GBW.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GBW.dir/build.make CMakeFiles/GBW.dir/src/GBW.cpp.i
+.PHONY : src/GBW.cpp.i
+
+src/GBW.s: src/GBW.cpp.s
+.PHONY : src/GBW.s
+
+# target to generate assembly for a file
+src/GBW.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GBW.dir/build.make CMakeFiles/GBW.dir/src/GBW.cpp.s
+.PHONY : src/GBW.cpp.s
 
 src/amplitudelib.o: src/amplitudelib.cpp.o
 .PHONY : src/amplitudelib.o
@@ -453,6 +490,7 @@ help:
 	@echo "... CGCTest"
 	@echo "... DataFile"
 	@echo "... FRAG"
+	@echo "... GBW"
 	@echo "... Interpolator"
 	@echo "... KKP"
 	@echo "... KKP_Fortran"
@@ -462,6 +500,9 @@ help:
 	@echo "... src/CGCTest.o"
 	@echo "... src/CGCTest.i"
 	@echo "... src/CGCTest.s"
+	@echo "... src/GBW.o"
+	@echo "... src/GBW.i"
+	@echo "... src/GBW.s"
 	@echo "... src/amplitudelib.o"
 	@echo "... src/amplitudelib.i"
 	@echo "... src/amplitudelib.s"
